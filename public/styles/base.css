@@ -1,0 +1,136 @@
+:root {
+  --primary: rgb(19, 21, 122);
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+  text-align: center;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover,
+a:active {
+  color: white;
+}
+
+#main-header {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+#main-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-header li {
+  margin: 0 1rem;
+}
+
+#main-header a {
+  text-decoration: none;
+  color: white;
+}
+
+#main-header button {
+  font: inherit;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+}
+
+#main-header a:hover,
+#main-header a:active,
+#main-header button:hover,
+#main-header button:active {
+  color: rgb(209, 88, 233);
+}
+
+.btn {
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--primary);
+  /* border: 1px solid var(--primary); */
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  border: none;
+}
+
+.btn.delete {
+  background-color: rgb(224, 60, 60);
+  border: none;
+}
+
+.btn.delete:hover,
+.btn.delete:active {
+  background-color: rgb(151, 41, 41);
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgb(35, 38, 218);
+  border-color: rgb(35, 38, 218);
+}
+
+.btn.btn-alt {
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin: 10px 0;
+}
+
+.btn.btn-alt:hover,
+.btn.btn-alt:active {
+  color: white;
+}
+
+/************ blog-list  ************/
+
+.blog-list {
+  text-align: center;
+}
+
+/************ footer  ************/
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: var(--primary);
+  padding: 0.5rem 0;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: black;
+}

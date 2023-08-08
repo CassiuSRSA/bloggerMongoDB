@@ -1,0 +1,26 @@
+<%- include('includes/head.ejs', { title: 'Profile' }) %>
+<link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <%- include('includes/header.ejs') %>
+  <main>
+    <h1>My Blog Page</h1>
+  </main>
+    <section class="blog-list">
+      <% if (!posts || posts.length === 0) { %>
+        <h2>No posts yet - Start posting!</h2>
+        <form action="/posts/new" method="GET">
+        <button class="btn">New Post</button>
+        </form> 
+        <% }  else { %>
+          <div class="post-grid">
+          <% for(const post of posts) { %>
+            <%- include('includes/post-item.ejs', {post: post}) %>
+            <% } %>
+          </div>
+          <% } %>
+    </section>
+  
+ 
+</body>
+</html>

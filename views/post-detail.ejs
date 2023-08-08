@@ -1,0 +1,26 @@
+<%- include('includes/head.ejs', { title: 'Post' }) %>
+<link rel="stylesheet" href="/styles/post.css">
+ 
+</head>
+
+<body>
+  <%- include('includes/header.ejs') %>
+  <main id="post-detail">
+    <div class="post-card">
+    <h1><%= post.title %></h1>
+    <p><%= post.text %></p>
+    <p>By <%= post.username %></p>
+    <% if(String(post.userId) === String(locals.id)) {%>
+      <a class="btn" href="/posts/<%= post._id %>/edit">Edit</a>
+      <form action="/posts/<%= post._id %>/delete" method="POST">
+      <button class="btn delete">Delete Post</button>
+    </form>
+    
+      <% } %>
+    </div>
+  </main>
+  
+</body>
+
+
+</html>

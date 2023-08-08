@@ -1,0 +1,33 @@
+.post-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 200px);
+  align-content: center;
+  gap: 5rem;
+  width: 100%;
+  margin: 50px auto 100px auto;
+}
+
+.post-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 15rem;
+  min-width: 100px;
+  min-height: 13rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.post-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  width: 80%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.author-name {
+  font-weight: bold;
+}

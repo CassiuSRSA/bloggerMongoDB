@@ -1,0 +1,26 @@
+<%- include('includes/head.ejs', { title: 'Create Post' }) %>
+  <link rel="stylesheet" href="/styles/forms.css">
+  <link rel="stylesheet" href="/styles/auth.css">
+</head>
+
+<body>
+  <%- include('includes/header.ejs') %>
+  <main id="new-post">
+    <h1>New Post</h1>
+    <form action="/posts/new" method="POST">
+      <div class="form-control">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" maxlength="40" required>
+      </div>
+      <div class="form-control">
+        <label for="post">Share your thoughts</label>
+        <textarea name="post" id="post" cols="30" rows="10"></textarea>
+      </div>
+      <button class="btn">Post it!</button>
+    </form>
+  </main>
+  
+</body>
+
+
+</html>

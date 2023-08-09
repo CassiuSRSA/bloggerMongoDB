@@ -8,14 +8,14 @@
   <main id="post-detail">
     <div class="post-card">
     <h1><%= post.title %></h1>
-    <p><%= post.text %></p>
-    <p>By <%= post.username %></p>
+    <p class="post-text"><%= post.text %></p>
+    <p class="post-author">By <span class="author-name"><%= post.username %></span></p>
     <% if(String(post.userId) === String(locals.id)) {%>
-      <a class="btn" href="/posts/<%= post._id %>/edit">Edit</a>
+      
+      <a class="btn edit" href="/posts/<%= post._id %>/edit">Edit</a>
       <form action="/posts/<%= post._id %>/delete" method="POST">
       <button class="btn delete">Delete Post</button>
     </form>
-    
       <% } %>
     </div>
   </main>

@@ -84,20 +84,29 @@ a:active {
   border: none;
 }
 
+.btn.edit {
+  background-color: rgb(160, 142, 39);
+}
+
 .btn.delete {
   background-color: rgb(224, 60, 60);
   border: none;
 }
 
-.btn.delete:hover,
-.btn.delete:active {
-  background-color: rgb(151, 41, 41);
+.btn.edit:hover,
+.btn.edit:active {
+  background-color: rgb(128, 113, 31);
 }
 
 .btn:hover,
 .btn:active {
   background-color: rgb(35, 38, 218);
   border-color: rgb(35, 38, 218);
+}
+
+.btn.delete:hover,
+.btn.delete:active {
+  background-color: rgb(151, 41, 41);
 }
 
 .btn.btn-alt {

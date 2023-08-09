@@ -34,34 +34,18 @@ const client = new MongoClient(uri, {
   },
 });
 
-let database;
-
-async function connectToDatabase() {
+async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    database = await client.connect();
+    await client.connect();
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
-    return database;
   } finally {
     // Ensures that the client will close when you finish/error
     await client.close();
   }
 }
-
-connectToDatabase().catch(console.dir);
-
-const getDb = () => {
-  if (!database) {
-    throw { message: "You must connect first!" };
-  }
-  return database;
-};
-
-module.exports = {
-  connectToDatabase: connectToDatabase,
-  getDb: getDb,
-};
+run().catch(console.dir);

@@ -19,7 +19,7 @@ const routes = require("./routes/routes");
 const MongoDBStore = mongodbStore(session);
 
 const sessionStore = new MongoDBStore({
-  uri: "mongodb://127.0.0.1:27017",
+  uri: "mongodb+srv://cassius:sean1234@cluster0.67m2ynu.mongodb.net/?retryWrites=true&w=majority",
   databaseName: "blogger",
   collection: "sessions",
 });

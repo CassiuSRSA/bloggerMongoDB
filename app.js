@@ -74,6 +74,9 @@ app.use((error, req, res, next) => {
 });
 
 // INITIATE SERVER UPON DATABASE CONNECTION
-db.connectToDatabase().then(() => {
-  app.listen(3000);
+app.listen("3000", () => {
+  console.log("Server started");
 });
+// db.connectToDatabase().then(() => {
+//   app.listen(3000);
+// });

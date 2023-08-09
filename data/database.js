@@ -1,11 +1,16 @@
-const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri =
-  "mongodb+srv://<username>:<password>@cluster0.67m2ynu.mongodb.net/?retryWrites=true&w=majority";
+const mongodb = require("mongodb");
+let mongodbUrl = "mongodb://127.0.0.1:27017";
+
+if (process.env.MONGODB_URL) {
+  mongodbUrl = process.env.MONGODB_URL;
+}
+
+const MongoClient = mongodb.MongoClient;
 
 let database;
 
 const connectToDatabase = async () => {
-  const client = await MongoClient.connect(uri);
+  const client = await MongoClient.connect(mongodbUrl);
   database = client.db("blogger");
 };
 
@@ -19,4 +24,5 @@ const getDb = () => {
 module.exports = {
   connectToDatabase: connectToDatabase,
   getDb: getDb,
+  mongodbUrl: mongodbUrl,
 };

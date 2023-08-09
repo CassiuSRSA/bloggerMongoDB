@@ -15,11 +15,18 @@ const db = require("./data/database");
 const blogRoutes = require("./routes/blogRoutes");
 const routes = require("./routes/routes");
 
+// SETTING UP PORT ENV VARIABLE
+let port = 3000;
+
+if (process.env.PORT) {
+  port = process.env.PORT;
+}
+
 //MONGODBSTORE SETUP
 const MongoDBStore = mongodbStore(session);
 
 const sessionStore = new MongoDBStore({
-  uri: "mongodb+srv://cassius:sean1234@cluster0.67m2ynu.mongodb.net/?retryWrites=true&w=majority",
+  uri: db.mongodbUrl,
   databaseName: "blogger",
   collection: "sessions",
 });
@@ -74,9 +81,6 @@ app.use((error, req, res, next) => {
 });
 
 // INITIATE SERVER UPON DATABASE CONNECTION
-app.listen("3000", () => {
-  console.log("Server started");
+db.connectToDatabase().then(() => {
+  app.listen(port);
 });
-// db.connectToDatabase().then(() => {
-//   app.listen(3000);
-// });

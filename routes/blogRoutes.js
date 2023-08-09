@@ -62,7 +62,6 @@ router.get("/posts/:id/edit", async (req, res) => {
   if (!post) {
     return res.status(404).render("404");
   }
-  console.log(post);
   res.render("update-post", { post: post });
 });
 

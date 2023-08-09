@@ -37,3 +37,7 @@
 .post-author {
   text-align: justify;
 }
+
+.post-text {
+  white-space: pre-wrap;
+}

@@ -103,13 +103,13 @@ a:active {
 .btn.btn-alt {
   background-color: transparent;
   border: none;
-  color: white;
+  color: var(--primary);
   margin: 10px 0;
 }
 
 .btn.btn-alt:hover,
 .btn.btn-alt:active {
-  color: white;
+  color: black;
 }
 
 /************ blog-list  ************/

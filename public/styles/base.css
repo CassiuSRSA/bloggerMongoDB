@@ -125,6 +125,9 @@ a:active {
 
 .blog-list {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /************ footer  ************/

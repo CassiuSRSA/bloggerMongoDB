@@ -1,13 +1,9 @@
 .post-grid {
   display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, 200px);
-  align-content: center;
-  column-gap: 5rem;
-  row-gap: 2rem;
-  width: 100%;
-  margin: 50px auto 100px auto;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  place-items: center;
+  width: 70%;
 }
 
 .post-item {

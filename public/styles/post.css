@@ -1,7 +1,7 @@
 .post-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
   place-items: center;
   width: 70%;
 }
@@ -10,11 +10,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 15rem;
-  min-width: 100px;
-  min-height: 13rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
+  border-radius: 10px;
+  min-width: 15rem;
+  min-height: 15rem;
   padding: 1rem;
 }
 

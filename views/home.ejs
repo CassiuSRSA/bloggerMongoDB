@@ -3,25 +3,29 @@
 </head>
 <body>
   <%- include('includes/header.ejs') %>
-  <main>
-    <h1>Welcome to The Blogger</h1>
-    <h3>A safe place to share your thoughts</h3>
+  <main id="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to The Blogger</h1>
+      <h3>A safe place to share your thoughts...</h3>
+    </div>
   </main>
-  <section class="blog-list">
+  <section id="latest">
+    <h2 class="heading">Latest Posts</h2>
+    
     <% if (!posts || posts.length === 0) { %>
       <h2>No posts yet - Start posting!</h2>
       <form action="/posts/new" method="GET">
       <button class="btn">New Post</button>
       </form> 
       <% }  else { %>
-        <div class="post-grid">
+        <div class="post-flex">
         <% for(const post of posts) { %>
           <%- include('includes/post-item.ejs', {post: post}) %>
           <% } %>
         </div>
         <% } %>
   </section>
-  
+  <%- include('includes/footer.ejs') %>
 </body>
 
 </html>

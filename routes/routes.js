@@ -9,7 +9,9 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   const posts = await db.getDb().collection("posts").find({}).toArray();
-  res.render("home", { posts: posts });
+  const lastSixPosts = posts.reverse().slice(0, 6);
+
+  res.render("home", { posts: lastSixPosts });
 });
 
 //////////////////// SIGNUP GET ////////////////////

@@ -5,7 +5,7 @@
 
 <body>
   <%- include('includes/header.ejs') %>
-  <main id="post-detail">
+  <section>
     <div class="post-card">
     <h1><%= post.title %></h1>
     <p class="post-text"><%= post.text %></p>
@@ -18,8 +18,8 @@
     </form>
       <% } %>
     </div>
-  </main>
-  
+  </section>
+  <%- include('includes/footer.ejs') %>
 </body>
 
 

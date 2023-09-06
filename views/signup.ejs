@@ -1,12 +1,12 @@
 <%- include('includes/head.ejs', { title: 'Signup' }) %>
-  <link rel="stylesheet" href="/styles/forms.css">
-  <link rel="stylesheet" href="/styles/auth.css">
+  <link rel="stylesheet" href="/styles/base.css">
+ 
 </head>
 
 <body>
   <%- include('includes/header.ejs') %>
-  <main id="signup">
-    <h1>Signup</h1>
+  <section id="form">
+    <h1 class="heading">Signup</h1>
     <% if(inputData.hasError) { %>
       <p id="input-error"><%= inputData.message %></p>
       <% } %>
@@ -32,9 +32,9 @@
     <div id="auth-alternative">
       <p>Already a user? <a class="btn btn-alt" href="/login">Login instead</a></p>
     </div>
-  </main>
+  </section>
   
-  
+  <%- include('includes/footer.ejs') %>
 </body>
 
 </html>

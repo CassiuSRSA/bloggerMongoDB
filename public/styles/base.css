@@ -96,7 +96,10 @@ hr {
 
 #hero-section.all-posts {
   background: no-repeat url("../assets/hero2.jpg") center center/cover;
-  background-position: ;
+}
+
+#hero-section.hero-no-posts {
+  background: no-repeat url("../assets/hero3.jpg") center center/cover;
 }
 
 #hero-section::before {
@@ -105,6 +108,10 @@ hr {
   position: absolute;
   inset: 0;
   z-index: 1;
+}
+
+#hero-section.all-posts::before {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .hero-content {
@@ -120,6 +127,17 @@ hr {
 .hero-content h3 {
   font-size: 2rem;
   color: var(--color-alt);
+}
+
+.no-posts {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: var(--margin-2);
+  text-align: center;
+}
+
+.hero-content button {
+  font-size: 2rem;
 }
 
 /*******************************************/
@@ -247,7 +265,7 @@ input:focus {
 .post-card {
   border: 1px var(--primary) solid;
   border-radius: 10px;
-  width: min(50%, 20rem);
+  width: min(70%, 20rem);
   margin: 0 auto;
   padding: var(--padding-2);
   box-shadow: var(--box-shadow);
@@ -329,5 +347,12 @@ footer a:hover {
 
   .hero-content h3 {
     font-size: 1.5rem;
+  }
+
+  .no-posts {
+    font-size: 2rem;
+  }
+  .hero-content button {
+    font-size: 1.2rem;
   }
 }

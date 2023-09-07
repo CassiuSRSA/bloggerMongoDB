@@ -1,26 +1,34 @@
 <%- include('includes/head.ejs', { title: 'Profile' }) %>
-<link rel="stylesheet" href="/styles/base.css">
-</head>
-<body>
-  <%- include('includes/header.ejs') %>
-  <section>
-    <h1 class="heading">My Blog Page</h1>
-  </section>
-    <section>
-      <% if (!posts || posts.length === 0) { %>
-        <h2>No posts yet - Start posting!</h2>
-        <form action="/posts/new" method="GET">
-        <button class="btn">New Post</button>
-        </form> 
-        <% }  else { %>
-          <div class="post-flex">
-          <% for(const post of posts) { %>
-            <%- include('includes/post-item.ejs', {post: post}) %>
+  <link rel="stylesheet" href="/styles/base.css">
+  </head>
+
+  <body>
+    <%- include('includes/header.ejs') %>
+      <section>
+        <h1 class="heading">My Blog Page</h1>
+      </section>
+      <section>
+        <% if (!posts || posts.length===0) { %>
+
+
+          <main id="hero-section" class="hero-no-posts">
+            <div class="hero-content">
+              <h2 class="no-posts">No posts yet - Start posting!</h2>
+              <form action="/posts/new" method="GET">
+                <button class="btn">New Post</button>
+              </form>
+            </div>
+          </main>
+          <% } else { %>
+            <div class="post-flex">
+              <% for(const post of posts) { %>
+                <%- include('includes/post-item.ejs', {post: post}) %>
+                  <% } %>
+            </div>
             <% } %>
-          </div>
-          <% } %>
-    </section>
-  
-    <%- include('includes/footer.ejs') %>
-</body>
-</html>
+      </section>
+
+      <%- include('includes/footer.ejs') %>
+  </body>
+
+  </html>

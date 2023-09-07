@@ -13,7 +13,7 @@
     <h2 class="heading">Latest Posts</h2>
     
     <% if (!posts || posts.length === 0) { %>
-      <h2>No posts yet - Start posting!</h2>
+      <h2 class="no-post">No posts yet - Start posting!</h2>
       <form action="/posts/new" method="GET">
       <button class="btn">New Post</button>
       </form> 

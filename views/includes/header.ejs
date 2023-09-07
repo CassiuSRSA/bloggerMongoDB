@@ -6,9 +6,12 @@
   <nav class="navbar">
     <ul>
       <li><a href="/">Home</a></li>
+      <li><a href="/posts">All Posts</a></li>
       <% if (!locals.isAuth) { %>
+        
       <li><a href="/signup">Signup</a></li>
       <li><a href="/login">Login</a></li>
+      
       <% } %> <% if (locals.isAdmin) { %>
       <li><a href="/admin">Admin</a></li>
       <% } %> <% if (locals.isAuth) { %>

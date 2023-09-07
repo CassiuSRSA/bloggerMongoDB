@@ -8,8 +8,12 @@
   <section>
     <div class="post-card">
     <h1><%= post.title %></h1>
+    <hr>
+    <p class="post-author">A post by <span class="author-name"><%= post.username %></span></p>
+    <p class="post-date"><%= post.humanReadableDate %></p>
+    <hr>
     <p class="post-text"><%= post.text %></p>
-    <p class="post-author">By <span class="author-name"><%= post.username %></span></p>
+    
     <% if(String(post.userId) === String(locals.id)) {%>
       
       <a class="btn edit" href="/posts/<%= post._id %>/edit">Edit</a>

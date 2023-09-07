@@ -7,6 +7,13 @@ const ObjectId = mongodb.ObjectId;
 
 const router = express.Router();
 
+router.get("/posts", async (req, res) => {
+  const posts = await db.getDb().collection("posts").find({}).toArray();
+  const postsEarliestFirst = posts.reverse();
+
+  res.render("all-posts", { posts: postsEarliestFirst });
+});
+
 router.get("/posts/new", (req, res) => {
   if (!res.locals.isAuth) {
     return res.redirect("/login");

@@ -41,7 +41,7 @@
   right: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   #hamburger {
     display: block;
   }

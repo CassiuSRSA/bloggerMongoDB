@@ -62,11 +62,18 @@ section {
   text-align: center;
   border: none;
   margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
 }
 
 .btn:hover,
 .btn:active {
   background-color: var(--secondary);
+  color: #fff;
+}
+
+hr {
+  margin: 1rem 0;
+  border: 1px solid var(--primary);
 }
 
 /*******************************************/
@@ -85,6 +92,11 @@ section {
   padding: 0 var(--padding-2);
   position: relative;
   box-shadow: var(--box-shadow);
+}
+
+#hero-section.all-posts {
+  background: no-repeat url("../assets/hero2.jpg") center center/cover;
+  background-position: ;
 }
 
 #hero-section::before {
@@ -132,14 +144,15 @@ section {
 
 .post-item h3 {
   font-size: 1.4rem;
-  margin-bottom: 1rem;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: var(--margin-2);
 }
 
 .post-item p {
-  padding-bottom: var(--padding-2);
   font-size: 1.2rem;
   color: #000;
+  margin-bottom: var(--margin-2);
 }
 
 .post-item p:last-of-type {
@@ -186,6 +199,7 @@ form {
   background: none;
   color: var(--primary);
   display: inline;
+  box-shadow: none;
 }
 
 #auth-alternative .btn-alt:hover {
@@ -236,14 +250,20 @@ input:focus {
   width: min(50%, 20rem);
   margin: 0 auto;
   padding: var(--padding-2);
+  box-shadow: var(--box-shadow);
 }
 
 .post-card h1 {
   margin-bottom: var(--margin-2);
+  text-align: center;
 }
 
 .post-card p {
-  margin-bottom: var(--margin-2);
+  color: #000;
+}
+
+.post-card .post-author {
+  margin-bottom: 0.5rem;
 }
 
 .post-card .btn.delete {
@@ -302,7 +322,7 @@ footer a:hover {
 /*******************************************/
 /*              Media Queries              */
 /*******************************************/
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .hero-content h1 {
     font-size: 3rem;
   }

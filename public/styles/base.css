@@ -279,6 +279,7 @@ input:focus {
 
 .post-card p {
   color: #000;
+  white-space: pre-wrap;
 }
 
 .post-card .post-author {

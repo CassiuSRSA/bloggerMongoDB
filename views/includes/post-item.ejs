@@ -1,6 +1,6 @@
 <div class="post-item">
   <h3><%= post.title %></h3>
-  <p><%= post.text.slice(0, 50) + '...' %></p>
+  <p><%= post.text.slice(0, 100) + '...' %></p>
   <p class="post-author">By <span class="author-name"><%= post.username %></span></p>
   <a class="btn" href="posts/<%= post._id %>">View Post</a>
 </div>

@@ -4,7 +4,8 @@
 
 <body>
   <%- include('includes/header.ejs') %>
-  <section id="form">
+  <section>
+    <div id="form">
     <h1 class="heading">New Post</h1>
     <form action="/posts/new" method="POST">
       <div class="form-control">
@@ -17,6 +18,7 @@
       </div>
       <button class="btn">Post it!</button>
     </form>
+  </div>
   </section>
   <%- include('includes/footer.ejs') %>
 </body>

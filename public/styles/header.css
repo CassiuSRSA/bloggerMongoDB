@@ -41,6 +41,10 @@
   right: 2rem;
 }
 
+.logout {
+  white-space: nowrap;
+}
+
 @media (max-width: 650px) {
   #hamburger {
     display: block;
